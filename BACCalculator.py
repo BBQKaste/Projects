@@ -27,10 +27,11 @@ else:
 weight_grams = weight * 1000
 bac = (total_alcohol_grams / (weight_grams * bwc)) * 100 - (0.015 * time)
 bac_percentage = max(0, bac)
-print(f"Your estimated BAC is: {bac_percentage:.2f}%")
+print(f"Your estimated BAC is: {bac_percentage:.3f}% or {bac_percentage*10:.2f}")
 sober = bac_percentage / 0.015
 hours = int(sober)
 minutes = int((sober - hours) * 60) % 60
 print(f"Estimated time to sober up: {hours} hours and {minutes} minutes")
+
 
 
